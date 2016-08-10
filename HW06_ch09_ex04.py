@@ -10,18 +10,31 @@
 # alfalfa?"
 #   - write function to assist you
 #   - type favorite sentence(s) here:
-#       1:
-#       2:
-#       3:
+#       1: He'll coach fall face off.
+#       2: Hello chef!
+#       3: Cool cocoa coffee!
 ##############################################################################
 # Imports
 
 # Body
+def uses_only(word,str):
+	for ltr in word:
+		if(ltr not in str):
+			return False
+	return True
+
+def sentence_frame():
+	ltr_str = 'acefhlo'
+	fin = open('words.txt','r')
+	word_lst = fin.read().splitlines()
+	for word in word_lst:
+		if(uses_only(word,ltr_str)):
+			print(word)
 
 
 ##############################################################################
 def main():
-    pass  # Call your function(s) here.
+    sentence_frame()  # Call your function(s) here.
 
 if __name__ == '__main__':
     main()
