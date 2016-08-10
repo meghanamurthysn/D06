@@ -5,3 +5,19 @@
 # In your final submission: 
 #  - Do not print anything extraneous!
 #  - Do not put anything but pass in main()
+##############################################################################
+def nested_sum(lst):
+	sum_item=0
+	for item in lst:
+		if type(item) == list:
+			sum_item += nested_sum(item)
+		else: 
+			sum_item += item
+	return sum_item
+
+##############################################################################
+def main():
+    pass
+
+if __name__ == '__main__':
+    main()
